@@ -117,6 +117,8 @@ header {
     margin-left: auto;
     position: relative;
     user-select: none;
+    list-style: none;
+    list-style-type: none;
     @media (min-width: 768px) {
       display: none;
     }
