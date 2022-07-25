@@ -1,0 +1,165 @@
+<template>
+  <header class="container-fluid">
+    <ul class="container item-ul">
+      <li>
+        <router-link to="/">home</router-link>
+      </li>
+      <li>
+        <router-link to="/about">about</router-link>
+      </li>
+      <li>
+        <router-link to="/stories">stories</router-link>
+      </li>
+      <li>
+        <router-link to="/dreams">dreams</router-link>
+      </li>
+      <li>
+        <router-link to="/text">text</router-link>
+      </li>
+    </ul>
+
+    <details>
+      <summary>
+        <span></span>
+        <span></span>
+        <span></span>
+      </summary>
+    </details>
+    <nav class="nav">
+      <ul>
+        <li>
+          <router-link to="/">home</router-link>
+        </li>
+        <li>
+          <router-link to="/about">about</router-link>
+        </li>
+        <li>
+          <router-link to="/stories">stories</router-link>
+        </li>
+        <li>
+          <router-link to="/dreams">dreams</router-link>
+        </li>
+        <li>
+          <router-link to="/text">text</router-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</template>
+
+<script setup>
+import { ref } from "vue";
+</script>
+
+<style scoped lang="scss">
+header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  .item-ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+    @media (max-width: 768px) {
+      display: none;
+    }
+    li {
+      padding: 0;
+      margin: 0;
+
+      a {
+        padding: 0 10px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
+  .nav {
+    position: absolute;
+    height: 0px;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 1);
+    transition: all 0.5s;
+    overflow: hidden;
+    ul {
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      li {
+        width: 100vw;
+        border-bottom: 1px solid #555;
+        padding: 20px 0px;
+        a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  details[open] + .nav {
+    height: calc(100vh - 100%);
+  }
+  &:has(details[open]) {
+    background-color: aqua !important;
+  }
+  details {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    position: relative;
+    user-select: none;
+    @media (min-width: 768px) {
+      display: none;
+    }
+    &[open] {
+      summary {
+        span {
+          &:nth-child(1) {
+            top: calc(50% - 2px);
+            transform: rotate(-45deg);
+          }
+          &:nth-child(2) {
+            display: none;
+          }
+          &:nth-child(3) {
+            transform: rotate(45deg);
+            bottom: calc(50% - 2px);
+          }
+        }
+      }
+    }
+    summary {
+      position: relative;
+      list-style: none;
+      // width: 30px;
+      height: 30px;
+      span {
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background-color: #ffffff;
+        transition: all 0.5s;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+        &:nth-child(2) {
+          top: calc(50% - 2px);
+        }
+        &:nth-child(3) {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+</style>
