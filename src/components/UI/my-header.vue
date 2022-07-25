@@ -108,9 +108,9 @@ header {
   details[open] + .nav {
     height: calc(100vh - 100%);
   }
-  &:has(details[open]) {
-    background-color: aqua !important;
-  }
+  // &:has(details[open]) {
+  //   background-color: aqua !important;
+  // }
   details {
     width: 30px;
     height: 30px;
@@ -140,6 +140,7 @@ header {
     summary {
       position: relative;
       list-style: none;
+      list-style-type: none;
       // width: 30px;
       height: 30px;
       span {
