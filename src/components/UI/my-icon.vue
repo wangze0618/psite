@@ -23,9 +23,7 @@ const show = () => {
   opacity: 0;
   margin-top: -30px;
 }
-.fade-enter-avtive,
-.fade-leave-active {
-}
+
 .fade-enter-to,
 .fade-leave-from {
   margin-top: 5px;

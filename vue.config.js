@@ -10,7 +10,7 @@ module.exports = defineConfig({
         target: "https://v.api.aa1.cn", //API服务器的地址
         // ws: true, //代理websockets
         changeOrigin: true, // 是否跨域，虚拟的站点需要更管origin
-        secure: false,
+        // secure: false,
         // pathRewrite: {
         //   "^/api": "",
         // },
