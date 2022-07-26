@@ -1,5 +1,5 @@
 <template>
-  <div class="about">开发中</div>
+  <div class="dream">开发中</div>
 </template>
 
 <script setup>
@@ -7,7 +7,7 @@ import { ref } from "vue";
 </script>
 
 <style scoped lang="scss">
-.about {
+.dream {
   margin: 70px;
 }
 </style>

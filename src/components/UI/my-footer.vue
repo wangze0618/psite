@@ -20,7 +20,10 @@
           </div>
         </div>
       </div>
-      <p style="text-align: center; color: #888">{{ sentence }}</p>
+      <!-- <p style="text-align: center; color: #888">{{ sentence }}</p> -->
+      <p style="text-align: center; color: #888">
+        世间无限丹青手，一片伤心画不成。——高蟾
+      </p>
       <h3>wangze0618</h3>
     </div>
   </div>

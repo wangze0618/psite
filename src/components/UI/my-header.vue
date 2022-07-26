@@ -8,10 +8,10 @@
         <router-link to="/about">ABOUT</router-link>
       </li>
       <li>
-        <router-link to="/stories">STORY</router-link>
+        <router-link to="/story">STORY</router-link>
       </li>
       <li>
-        <router-link to="/dreams">DREAM</router-link>
+        <router-link to="/dream">DREAM</router-link>
       </li>
       <li>
         <router-link to="/text">TEXT</router-link>
@@ -20,7 +20,7 @@
         <router-link to="/login">LOGIN</router-link>
       </li>
     </ul>
-    <h2 class="h2">WANGZE'S PAGE</h2>
+    <h2 class="h2">小泽君😄's 测试</h2>
     <details>
       <summary>
         <span></span>
@@ -37,10 +37,10 @@
           <router-link to="/about">ABOUT</router-link>
         </li>
         <li>
-          <router-link to="/stories">STORY</router-link>
+          <router-link to="/story">STORY</router-link>
         </li>
         <li>
-          <router-link to="/dreams">DREAM</router-link>
+          <router-link to="/dream">DREAM</router-link>
         </li>
         <li>
           <router-link to="/text">TEXT</router-link>
@@ -62,6 +62,7 @@ import { ref } from "vue";
   color: rgb(88, 255, 127) !important;
 }
 header {
+  user-select: none;
   font-family: Segoe UI Light, Microsoft YaHei, Arial, Helvetica, sans-serif;
   height: 70px;
   width: 100%;
@@ -153,7 +154,8 @@ header {
             transform: rotate(-45deg);
           }
           &:nth-child(2) {
-            display: none;
+            // display: none;
+            opacity: 0;
           }
           &:nth-child(3) {
             transform: rotate(45deg);

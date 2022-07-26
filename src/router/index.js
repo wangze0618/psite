@@ -3,6 +3,9 @@ import Layout from "@/views/Layout.vue";
 import Home from "@/views/home/index.vue";
 import About from "@/views/about/index.vue";
 import Login from "@/views/login/index.vue";
+import Text from "@/views/text/index.vue";
+import Story from "@/views/story/index.vue";
+import Dream from "@/views/dream/index.vue";
 
 const routes = [
   // 一级路由
@@ -21,6 +24,18 @@ const routes = [
       {
         path: "/login",
         component: Login,
+      },
+      {
+        path: "/text",
+        component: Text,
+      },
+      {
+        path: "/dream",
+        component: Dream,
+      },
+      {
+        path: "/story",
+        component: Story,
       },
     ],
   },
