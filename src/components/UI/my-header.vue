@@ -2,22 +2,22 @@
   <header class="container-fluid">
     <ul class="container item-ul">
       <li>
-        <router-link to="/">home</router-link>
+        <router-link to="/">HOME</router-link>
       </li>
       <li>
-        <router-link to="/about">about</router-link>
+        <router-link to="/about">ABOUT</router-link>
       </li>
       <li>
-        <router-link to="/stories">stories</router-link>
+        <router-link to="/stories">STORY</router-link>
       </li>
       <li>
-        <router-link to="/dreams">dreams</router-link>
+        <router-link to="/dreams">DREAM</router-link>
       </li>
       <li>
-        <router-link to="/text">text</router-link>
+        <router-link to="/text">TEXT</router-link>
       </li>
     </ul>
-
+    <h2 class="h2">WANGZE'S PAGE</h2>
     <details>
       <summary>
         <span></span>
@@ -28,19 +28,19 @@
     <nav class="nav">
       <ul>
         <li>
-          <router-link to="/">home</router-link>
+          <router-link to="/">HOME</router-link>
         </li>
         <li>
-          <router-link to="/about">about</router-link>
+          <router-link to="/about">ABOUT</router-link>
         </li>
         <li>
-          <router-link to="/stories">stories</router-link>
+          <router-link to="/stories">STORY</router-link>
         </li>
         <li>
-          <router-link to="/dreams">dreams</router-link>
+          <router-link to="/dreams">DREAM</router-link>
         </li>
         <li>
-          <router-link to="/text">text</router-link>
+          <router-link to="/text">TEXT</router-link>
         </li>
       </ul>
     </nav>
@@ -53,13 +53,26 @@ import { ref } from "vue";
 
 <style scoped lang="scss">
 header {
+  font-family: Segoe UI Light, Microsoft YaHei, Arial, Helvetica, sans-serif;
   height: 70px;
   width: 100%;
   display: flex;
   align-items: center;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  .h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    margin-bottom: 0;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
   .item-ul {
     list-style: none;
     display: flex;
@@ -126,7 +139,7 @@ header {
       summary {
         span {
           &:nth-child(1) {
-            top: calc(50% - 2px);
+            top: calc(50% - 1px);
             transform: rotate(-45deg);
           }
           &:nth-child(2) {
@@ -134,7 +147,7 @@ header {
           }
           &:nth-child(3) {
             transform: rotate(45deg);
-            bottom: calc(50% - 2px);
+            bottom: calc(50% - 1px);
           }
         }
       }
@@ -151,7 +164,7 @@ header {
       span {
         position: absolute;
         width: 30px;
-        height: 4px;
+        height: 2px;
         background-color: #ffffff;
         transition: all 0.5s;
 
@@ -159,7 +172,7 @@ header {
           top: 0;
         }
         &:nth-child(2) {
-          top: calc(50% - 2px);
+          top: calc(50% - 1px);
         }
         &:nth-child(3) {
           bottom: 0;

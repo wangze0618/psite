@@ -6,5 +6,5 @@ import "@csstools/normalize.css";
 import "@/assets/css/normal.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min";
-
+import "@icon-park/vue-next/styles/index.css";
 createApp(App).use(store).use(router).mount("#app");

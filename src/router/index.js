@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Layout from "@/views/Layout.vue";
 import Home from "@/views/home/index.vue";
+import About from "@/views/about/index.vue";
 
 const routes = [
   // 一级路由
@@ -11,6 +12,10 @@ const routes = [
       {
         path: "/",
         component: Home,
+      },
+      {
+        path: "/about",
+        component: About,
       },
     ],
   },
