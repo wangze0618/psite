@@ -62,10 +62,11 @@ h3 {
 
 .icon-github {
   margin: 10px 5px;
-  color: #6b6b6b;
+  color: #7a7a7a;
 }
 .box-footer {
-  background-color: #dfdfdf;
+  background-color: rgb(222, 222, 222);
+  backdrop-filter: blur(5px);
   .container {
     height: 100%;
   }

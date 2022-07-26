@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Layout from "@/views/Layout.vue";
 import Home from "@/views/home/index.vue";
 import About from "@/views/about/index.vue";
+import Login from "@/views/login/index.vue";
 
 const routes = [
   // 一级路由
@@ -16,6 +17,10 @@ const routes = [
       {
         path: "/about",
         component: About,
+      },
+      {
+        path: "/login",
+        component: Login,
       },
     ],
   },
@@ -34,6 +39,12 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+});
+router.beforeEach((from, to, next) => {
+  console.log(from);
+  console.log("---");
+  console.log(to);
+  next();
 });
 
 export default router;

@@ -16,6 +16,9 @@
       <li>
         <router-link to="/text">TEXT</router-link>
       </li>
+      <li>
+        <router-link to="/login">LOGIN</router-link>
+      </li>
     </ul>
     <h2 class="h2">WANGZE'S PAGE</h2>
     <details>
@@ -42,6 +45,9 @@
         <li>
           <router-link to="/text">TEXT</router-link>
         </li>
+        <li>
+          <router-link to="/login">LOGIN</router-link>
+        </li>
       </ul>
     </nav>
   </header>
@@ -52,16 +58,20 @@ import { ref } from "vue";
 </script>
 
 <style scoped lang="scss">
+.router-link-exact-active {
+  color: rgb(88, 255, 127) !important;
+}
 header {
   font-family: Segoe UI Light, Microsoft YaHei, Arial, Helvetica, sans-serif;
   height: 70px;
   width: 100%;
   display: flex;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(8px);
+  z-index: 999;
   .h2 {
     position: absolute;
     left: 50%;

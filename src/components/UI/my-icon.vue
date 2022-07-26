@@ -4,7 +4,7 @@
       <slot></slot>
     </div>
     <transition name="fade" mode="out-in">
-      <div v-show="isShow" class="layer-box"></div>
+      <div v-if="isShow" class="layer-box"></div>
     </transition>
   </div>
 </template>
@@ -26,7 +26,7 @@ const show = () => {
 
 .fade-enter-to,
 .fade-leave-from {
-  margin-top: 5px;
+  margin-top: 10px;
   opacity: 1;
 }
 .box-icon {
@@ -40,7 +40,7 @@ const show = () => {
   height: 120px;
   background-color: #fff;
   border-radius: 8px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s;
   &::after {
     position: absolute;
     top: -16px;
