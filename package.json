@@ -11,9 +11,11 @@
     "@icon-park/vue-next": "^1.4.2",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
+    "vee-validate": "^4.6.2",
     "vue": "^3.2.37",
     "vue-router": "^4.1.2",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-router": "~5.0.0",

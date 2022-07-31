@@ -1,11 +1,17 @@
 <template>
   <header class="container-fluid">
     <ul class="container item-ul">
-      <li>
-        <router-link to="/">HOME</router-link>
+      <li class="item-li">
+        <router-link class="item-link" to="/">HOME</router-link>
+        <!-- <div class="my-panel">
+          <a href="#">aaa</a>
+          <a href="#">aaa</a>
+          <a href="#">aaa</a>
+        </div> -->
       </li>
       <li>
         <router-link to="/about">ABOUT</router-link>
+        <div class="my-panel"></div>
       </li>
       <li>
         <router-link to="/story">STORY</router-link>
@@ -55,11 +61,35 @@
 
 <script setup>
 import { ref } from "vue";
+import MyPanel from "./my-panel.vue";
+const show = () => {
+  console.log(111);
+};
 </script>
 
 <style scoped lang="scss">
 .router-link-exact-active {
   color: rgb(88, 255, 127) !important;
+}
+.item-li {
+  // position: relative;
+  .my-panel {
+    display: none;
+    width: 200px;
+    background-color: aquamarine;
+    position: absolute;
+    top: 47px;
+    left: -70px;
+    transition: all 0.5s;
+    margin-top: -10px;
+    a {
+      display: block;
+    }
+  }
+  &:hover .my-panel {
+    margin-top: 0;
+    display: block;
+  }
 }
 header {
   user-select: none;
@@ -93,6 +123,7 @@ header {
       display: none;
     }
     li {
+      position: relative;
       padding: 0;
       margin: 0;
 

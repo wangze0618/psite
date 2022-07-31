@@ -37,12 +37,6 @@ import {
   Wechat,
 } from "@icon-park/vue-next";
 import MyIcon from "./my-icon.vue";
-import { getDailySetence } from "../../../utils/request2";
-const sentence = ref("");
-onMounted(async () => {
-  sentence.value = await getDailySetence("/api/yiyan/index.php");
-  sentence.value = sentence.value.replace(/<[^>]+>/g, "");
-});
 </script>
 
 <style scoped lang="scss">
