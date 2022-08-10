@@ -70,9 +70,14 @@
       <!-- <div v-for="item in 8" class="col-12 col-md-6 col-lg-3 mb-2">
         <img ref="imgList" src="../../assets/img/1.gif" alt="" srcset="" />
       </div> -->
-      <div v-for="item in 8" class="col-12 mb-2">
+      <div v-for="item in num" class="col-12 mb-2">
         <img v-lazyload="imgUrl" alt="" srcset="" />
       </div>
+      <MyInfinite
+        :loading="infiLoading"
+        :finished="infiFinished"
+        @infinite="infiniteLoading"
+      ></MyInfinite>
     </div>
   </div>
 </template>
@@ -81,6 +86,10 @@
 import { onMounted, ref } from "vue";
 import { useIntersectionObserver } from "@vueuse/core";
 import imgUrl from "../../assets/img/alphen.jpg";
+import MyInfinite from "@/components/UI/my-infinite.vue";
+const num = ref(8);
+const infiLoading = ref(false);
+const infiFinished = ref(false);
 // 组件内的局部指令
 // const vLazyload = {
 //   mounted: (el, binding) => {
@@ -115,6 +124,16 @@ import imgUrl from "../../assets/img/alphen.jpg";
 //     // );
 //   },
 // };
+
+const infiniteLoading = () => {
+  infiLoading.value = true;
+  if (num.value >= 30) {
+    infiFinished.value = true;
+  } else {
+    num.value += 2;
+  }
+  infiLoading.value = false;
+};
 </script>
 
 <style scoped lang="scss">
