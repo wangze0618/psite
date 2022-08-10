@@ -10,8 +10,8 @@ import store from "@/store";
 import Message from "@/components/TOOLS/Message";
 import my404 from "@/components/UI/my-404";
 
-const whiteList = ["/login"];
-// const whiteList = ["/login", "/", "/about", "/text", "/dream", "/story"];
+// const whiteList = ["/login"];
+const whiteList = ["/login", "/", "/about", "/text", "/dream", "/story"];
 const routes = [
   // 一级路由
   {

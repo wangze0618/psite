@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 1px;
+        padding: 0;
+      }
+      p {
+        height: 220px;
+        color: aliceblue;
+        font-size: 20px;
+        padding: 10px;
+        background-color: #716f6f;
+      }
+      img {
+        display: block;
+        /* margin: 1px; */
+        width: 600px;
+        height: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ducimus
+      corporis consectetur, neque cupiditate quam dolore ab quis, ea voluptate,
+      doloribus iure. Ipsa eos rem rerum quos praesentium fugiat ipsum!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ducimus
+      corporis consectetur, neque cupiditate quam dolore ab quis, ea voluptate,
+      doloribus iure. Ipsa eos rem rerum quos praesentium fugiat ipsum!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ducimus
+      corporis consectetur, neque cupiditate quam dolore ab quis, ea voluptate,
+      doloribus iure. Ipsa eos rem rerum quos praesentium fugiat ipsum!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ducimus
+      corporis consectetur, neque cupiditate quam dolore ab quis, ea voluptate,
+      doloribus iure. Ipsa eos rem rerum quos praesentium fugiat ipsum!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ducimus
+      corporis consectetur, neque cupiditate quam dolore ab quis, ea voluptate,
+      doloribus iure. Ipsa eos rem rerum quos praesentium fugiat ipsum!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ducimus
+      corporis consectetur, neque cupiditate quam dolore ab quis, ea voluptate,
+      doloribus iure. Ipsa eos rem rerum quos praesentium fugiat ipsum!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ducimus
+      corporis consectetur, neque cupiditate quam dolore ab quis, ea voluptate,
+      doloribus iure. Ipsa eos rem rerum quos praesentium fugiat ipsum!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ducimus
+      corporis consectetur, neque cupiditate quam dolore ab quis, ea voluptate,
+      doloribus iure. Ipsa eos rem rerum quos praesentium fugiat ipsum!
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id ducimus
+      corporis consectetur, neque cupiditate quam dolore ab quis, ea voluptate,
+      doloribus iure. Ipsa eos rem rerum quos praesentium fugiat ipsum!
+    </p>
+
+    <!-- 要监视的图片区域 -->
+    <img class="image" data-src="./src/assets/img/1.gif" alt="" />
+    <img class="image" data-src="./src/assets/img/alphen.jpg" alt="" />
+    <img class="image" data-src="./src/assets/img/computer.jpg" alt="" />
+  </body>
+  <script>
+    const imgList = document.querySelectorAll(".image");
+    const callback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const image = entry.target;
+          image.setAttribute("src", image.dataset.src);
+          observer.unobserve(image);
+        }
+      });
+    };
+    const observer = new IntersectionObserver(callback);
+    imgList.forEach((item) => {
+      observer.observe(item);
+    });
+  </script>
+</html>
