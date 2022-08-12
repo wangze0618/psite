@@ -5,7 +5,7 @@ import store from "./store";
 import "@csstools/normalize.css";
 import "@/assets/css/normal.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min";
+import "bootstrap/dist/js/bootstrap.bundle";
 import "@icon-park/vue-next/styles/index.css";
 import { useIntersectionObserver } from "@vueuse/core";
 import loading from "@/assets/img/1.gif";

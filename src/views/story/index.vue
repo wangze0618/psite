@@ -18,6 +18,8 @@
       <MyBreadItem to="/text">{{ i }}</MyBreadItem>
     </template>
   </MyBread>
+
+  <Ts></Ts>
 </template>
 
 <script setup>
@@ -25,6 +27,7 @@ import { ref } from "vue";
 import MyBread from "@/components/UI/my-bread.vue";
 import MyBreadItem from "@/components/UI/my-bread-item.vue";
 import { Right } from "@icon-park/vue-next";
+import Ts from "@/components/TOOLS/ts.vue";
 </script>
 
 <style scoped lang="scss">

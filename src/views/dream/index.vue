@@ -1,10 +1,13 @@
 <template>
-  <div class="dream">开发中</div>
-  <MyBread sp="/">
-    <MyBreadItem to="/">home</MyBreadItem>
-    <MyBreadItem to="/about">dream</MyBreadItem>
-    <MyBreadItem>text</MyBreadItem>
-  </MyBread>
+  <div class="dream">
+    开发中
+
+    <MyBread sp="/">
+      <MyBreadItem to="/">home</MyBreadItem>
+      <MyBreadItem to="/about">dream</MyBreadItem>
+      <MyBreadItem>text</MyBreadItem>
+    </MyBread>
+  </div>
 </template>
 
 <script setup>
